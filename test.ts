@@ -12,7 +12,7 @@ let info: {
     officeId: 45,
     isOpened: false,
     contacts: {
-        phone: "+79100000000",
+        phone: "+38000000000",
         email: "my@email.ua",
         address: {
             city: "Kiyv"
