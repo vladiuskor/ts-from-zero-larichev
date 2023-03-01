@@ -1,12 +1,20 @@
-const skills: string[] = ['Dev', 'DevOps', 'Testing'];
-
-for (const skill of skills) {
-    console.log(skill.toLowerCase());
+enum StatusCode {
+    SUCCESS = 123,
+    IN_PROCESS= 15,
+    FAILED
 }
 
-const result = skills
-    .filter((skill: string) => skill !== 'DevOps')
-    .map(skill => skill + '!')
-    .reduce((a, b) => a + b);
+const res = {
+    message: 'Платіж успішний',
+    statusCode: StatusCode.SUCCESS
+}
 
-console.log(result);
+if(res.statusCode === StatusCode.SUCCESS) {
+
+}
+
+function action(status: StatusCode) {
+
+}
+
+action(StatusCode.SUCCESS);

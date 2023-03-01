@@ -1,10 +1,12 @@
-var skills = ['Dev', 'DevOps', 'Testing'];
-for (var _i = 0, skills_1 = skills; _i < skills_1.length; _i++) {
-    var skill = skills_1[_i];
-    console.log(skill.toLowerCase());
+var StatusCode;
+(function (StatusCode) {
+    StatusCode[StatusCode["SUCCESS"] = 123] = "SUCCESS";
+    StatusCode[StatusCode["IN_PROCESS"] = 15] = "IN_PROCESS";
+    StatusCode[StatusCode["FAILED"] = 16] = "FAILED";
+})(StatusCode || (StatusCode = {}));
+var res = {
+    message: 'Платіж успішний',
+    statusCode: StatusCode.SUCCESS
+};
+if (res.statusCode === StatusCode.SUCCESS) {
 }
-var result = skills
-    .filter(function (skill) { return skill !== 'DevOps'; })
-    .map(function (skill) { return skill + '!'; })
-    .reduce(function (a, b) { return a + b; });
-console.log(result);
